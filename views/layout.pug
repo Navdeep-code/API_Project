@@ -1,0 +1,36 @@
+block variables 
+doctype html 
+html 
+  head
+    meta(charset="utf-8")
+    title #{title} | In Focus
+    block scripts 
+      link(rel="stylesheet", type="text/css", href="style.css")
+      script(src="https://kit.fontawesome.com/b87bf07b8e.js", crossorigin="anonymous")
+      script(src="/js/script.js")
+  body
+    header.content-wrapper
+      .header-content   
+        h2#site-name 
+          a(href="/") In Focus
+        form(method="post", action="/submit")
+          div.searchbox
+            input.search(type="text", name="search" placeholder="Search Images")
+            i.fa-solid.fa-magnifying-glass
+            button.searchbtn(type="submit") Search
+    main.content-wrapper
+      block main-content 
+    footer#footer.content-wrapper
+        div.footerfields
+          div#apps
+            a(href="https://twitter.com/i/flow/login", aria-label="Twitter")
+              i.fa-brands.fa-twitter
+            a(href="https://www.instagram.com/", aria-label="Instagram")
+              i.fa-brands.fa-instagram
+            a(href="https://mail.google.com/mail", aria-label="Mail")
+              i.fa-sharp.fa-solid.fa-envelope
+          form#main-form(action="#", method="post")
+            label(for="mail") Join our mailing list for updates
+            input#mail(type="email", placeholder="janedoe@gmail.com")
+            input#signup(type="submit", value="Sign up")
+        p &copy; Copyright HTTP 5211, 2023.

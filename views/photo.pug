@@ -1,0 +1,29 @@
+extends layout 
+
+block main-content
+  div.result
+    ul.popular
+      if search
+        each p in result.results
+          //getting a single Image
+          if p.id===picid
+            li.popular_pics
+              h2.keyword #{p.alt_description}
+              img.viewpic(src=p.urls.regular , alt=p.alt_description).popular_pic
+              - url = `/Removed?url=${p.urls.regular}&alt=${p.alt_description}`;
+              
+      else if (typeof(search) === 'undefined')
+        each p in photos
+          if p.id===picid
+            li.popular_pics
+              h2.keyword #{p.alt_description}
+              img.viewpic(src=p.urls.regular , alt=p.alt_description).popular_pics
+              - url = `/Removed?url=${p.urls.regular}&alt=${p.alt_description}`;
+
+    //Getting article list 
+    ul.Articles
+      if newslist
+        h3 Related Articles
+        each a in newslist
+          li.Article
+            a(href=a.web_url) #{a.headline.main}

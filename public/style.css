@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital@1&family=Lora:ital,wght@0,400;0,500;0,700;1,400&family=Rubik+Pixels&display=swap');
+
+:root {
+  --pink: #D16999;
+  --lightpink: #FBB5E0;
+  --maroon: #481A2C;
+  --white: #edeeef;
+  --gray: #d6d6d6;
+  ;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Lora', serif;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.content-wrapper {
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--pink);
+}
+
+header h2 a {
+  color: var(--pink);
+  text-decoration: none;
+
+}
+
+header {
+  box-shadow: 0 8px 6px -6px rgb(63, 63, 63);
+  padding: 0.2em 1em;
+  background-color: #ffff;
+}
+
+main {
+  background-color: var(--lightpink);
+}
+
+.main-content {
+  text-align: center;
+}
+
+.searchbox {
+  margin: 1em;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.5em;
+
+}
+
+.searchbox i {
+  position: absolute;
+  font-size: 1em;
+  left: 37px;
+  top: 80px;
+  color: gray;
+}
+
+.search {
+  flex: 0 0 85%;
+  padding: 0.5em 1.7em;
+}
+
+.search:focus {
+  border: 3px solid #555;
+}
+
+.searchbtn {
+  flex: 0 0 10%;
+  padding: 0.5em;
+  background-color: var(--lightpink);
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  transition: 1s;
+}
+
+.searchbtn:hover {
+  background-color: var(--maroon);
+  color: white;
+}
+
+.page-title {
+  background-image: url("./img/banner.jpg");
+  padding: 2em;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: whitesmoke;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.result {
+  background-color: var(--white);
+  padding: 1em;
+}
+
+.result h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.popular {
+  background-color: var(--gray);
+  margin: 1em;
+  padding: 1em 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+.popular_pics {
+  display: inline-block;
+  padding: 1em;
+
+}
+
+.popular_pic {
+  transition: 1s;
+  width: 400px;
+  height: auto;
+  z-index: -1;
+}
+
+.popular_pic:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+
+}
+
+.viewpic {
+  width: 80%;
+  height: auto;
+}
+
+.Articles a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.Articles a:hover {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  color: var(--pink);
+  text-decoration: underline;
+}
+
+.Article {
+  padding: 0.5em;
+}
+
+footer {
+  font-size: 1em;
+  font-weight: 500;
+  background-color: var(--pink);
+  padding: 1em;
+  color: #fff;
+}
+
+#main-form label {
+  margin-top: 1em;
+  display: block;
+  margin-bottom: 1em;
+}
+
+#main-form #mail {
+  width: 35%;
+  height: auto;
+  padding: 0.4em;
+  margin-right: 1em;
+}
+
+#main-form #signup {
+  background-color: var(--lightpink);
+  padding: 0.5em 1em;
+  border: none;
+  font-size: 1em;
+  font-weight: 500;
+  border-radius: 5px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+  margin-right: 2em;
+  transition: 1s;
+}
+
+#main-form #signup:hover {
+  background-color: var(--maroon);
+  box-shadow: 0 2px #666;
+  transform: translateY(2px);
+  color: #fff;
+}
+
+#apps {
+  float: right;
+  margin-top: 1.5em;
+  width: 200px;
+  height: auto;
+  padding-top: 1em;
+}
+
+#apps a {
+  color: var(--white);
+  font-size: 1.5em;
+  margin-right: 1em;
+}
+
+#apps a:hover {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width:768px) {
+  html {
+    font-size: 0.9em;
+  }
+
+  .searchbox i {
+    left: 35px;
+    top: 77px;
+
+  }
+
+  footer {
+    font-size: 0.9em;
+  }
+
+  #main-form label {
+    margin-top: 0.7em;
+  }
+
+  #main-form #mail {
+    padding: 0.3em;
+    margin-right: 0.8em;
+  }
+
+  #apps {
+    width: 145px;
+  }
+
+  #apps a {
+    font-size: 1.4em;
+  }
+}
+
+@media screen and (max-width:520px) {
+  html {
+    font-size: 0.7em;
+  }
+
+  .search {
+    flex: 0 0 75%;
+    padding: 0.3em 1.7em;
+  }
+
+  .searchbtn {
+    flex: 0 0 9%;
+
+  }
+
+  .searchbox i {
+    left: 30px;
+    top: 61px;
+
+  }
+
+  .popular_pic {
+    width: 100%;
+
+  }
+
+  #apps {
+    width: 118px;
+  }
+}
+
+@media screen and (max-width:378px) {
+
+  .searchbox {
+    gap: 0.2em;
+
+  }
+
+  .search {
+    flex: 0 0 55%;
+    padding: 0.3em;
+    padding-left: 1.5em;
+  }
+
+  .searchbtn {
+    flex: 0 0 8%;
+
+  }
+
+  #main-form label {
+    margin-top: 1em;
+    display: block;
+    margin-bottom: 1em;
+  }
+
+  #main-form #mail {
+    width: 50%;
+    padding: 0.2em;
+    margin-right: 0.5em;
+  }
+
+  #main-form #signup {
+    padding: 0.15em 0.5em;
+    font-size: 0.9em;
+  }
+
+  #apps {
+    width: 91.5px;
+    margin-top: 0;
+    padding-top: 0;
+    float: none;
+  }
+
+  #apps a {
+    font-size: 1.2em;
+  }
+}

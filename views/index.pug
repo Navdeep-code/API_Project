@@ -1,0 +1,29 @@
+extends layout 
+
+block main-content 
+  //You can overwrite the main-content block by writing block content
+  //in the template file which is extending.
+
+  div.main-content
+    h1.page-title Access to high quality images and know their stories!
+    if result
+      div.result
+        //getting headings Search query
+        h3.keyword #{Keyword+" Images"}
+        ul.popular
+          //getting images from Search Result
+          each p in result.results
+            li.popular_pics
+              - url = `/Photo-Veiw?query=${Keyword}&id=${p.id}&alt=${p.alt_description}`;
+              a(href=url) 
+                img(src=p.urls.regular , alt=p.alt_description).popular_pic
+    else
+      div.result
+        h3 Popular Images
+        ul.popular
+          //getting images from Popular Images
+          each p in photos
+            li.popular_pics
+              - url = `/Photo-Veiw?id=${p.id}&alt=${p.alt_description}`;
+              a(href=url) 
+                img(src=p.urls.regular , alt=p.alt_description).popular_pic
