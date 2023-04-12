@@ -147,8 +147,8 @@ main {
 }
 
 .viewpic {
-  width: 80%;
-  height: auto;
+   width: auto;
+  height: 600px;
 }
 
 .Articles a {
